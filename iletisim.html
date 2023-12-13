@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/font-awesome.min.css" >
+
+    <title>ŞehrimiTanıtıyorum</title>
+
+    
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js" ></script>
+ 	<style type="text/css">
+ 	#exampleInputmesaj{height:	120px;}
+ 	span{color:#4f37ed; }
+   </style>
+   <script language="javascript">
+    function ResetTheForm(form)
+    {
+        if (confirm("Formu temizlemek istediğinize emin misiniz?"))
+        {
+            form.reset();
+        }
+    }
+    </script>
+<script type="text/javascript">
+
+function odaklan(x)
+{
+	if(x=="exampleInputAdSoyad" || x=="exampleInputEposta" || x=="exampleInputnumara" || x=="exampleInputbaslik" || x=="exampleInputmesaj")
+	{
+		document.getElementById(x).value="";
+		document.getElementById(x).style.color="#000000";
+		document.getElementById("epostaUyari").innerHTML="";
+	}
+}
+function cikis(x,y)
+{
+
+	var kural,yazi;
+	yazi=document.getElementById("exampleInputEposta").value;
+	kural=/.+@.+\.+./;//suleakcay96@gmail.com . işareti suleakcay96 olan kısıma karakter sınırı olmadan hertürlü harf yazabilirsin anlamına gelir. @ işaretinden sonraki nokta ise @ işaretinden sonra karakter sınırı olmadığını belirtir.
+	if(y=="")
+	{
+		if(x=="exampleInputAdSoyad")
+		{
+			document.getElementById(x).value="Bu alan boş bırakılamaz";
+			document.getElementById(x).style.color="#ff3700";
+
+		}
+
+		if(x=="exampleInputEposta")
+		{
+			document.getElementById(x).value="Bu alan boş bırakılamaz";
+			document.getElementById(x).style.color="#ff3700";
+		}
+		else if(!kural.test(yazi))
+		{
+			document.getElementById("epostaUyari").innerHTML="Geçersiz E posta!";
+		}
+		if(x=="exampleInputnumara")
+		{
+			document.getElementById(x).value="Bu alan boş bırakılamaz";
+			document.getElementById(x).style.color="#ff3700";
+		}
+		if(x=="exampleInputmesaj")
+		{
+			document.getElementById(x).value="Bu alan boş bırakılamaz";
+			document.getElementById(x).style.color="#ff3700";
+		}
+		if(x=="exampleInputbaslik")
+		{
+			document.getElementById(x).value="Bu alan boş bırakılamaz";
+			document.getElementById(x).style.color="#ff3700";
+		}
+	}
+	else
+	{
+		document.getElementById.style.color="#000000";
+	}
+	
+	
+
+}
+function islem()
+{
+	var kural,yazi;
+	yazi=document.getElementById("exampleInputEposta").value;
+	kural=/.+@.+\.+./;//suleakcay96@gmail.com . işareti suleakcay96 olan kısıma karakter sınırı olmadan hertürlü harf yazabilirsin anlamına gelir. @ işaretinden sonraki nokta ise @ işaretinden sonra karakter sınırı olmadığını belirtir.
+
+
+
+	if(document.getElementById("exampleInputAdSoyad").value=="Ad Soyad" || document.getElementById("exampleInputAdSoyad").value=="" || document.getElementById("exampleInputAdSoyad").value=="Bu alan boş bırakılamaz")
+	{
+		document.getElementById("adUyari").innerHTML="Adınızı Soyadınızı Yazınız!";
+	}
+	if(document.getElementById("exampleInputEposta").value=="E-posta"|| document.getElementById("exampleInputAdSoyad").value=="" || document.getElementById("exampleInputAdSoyad").value=="Bu alan boş bırakılamaz")
+	{
+		document.getElementById("epostaUyari").innerHTML="E-Postanızı Yazınız!";
+	}
+	else if(!kural.test(yazi))//mail adresinin kurala göre test et.
+	{
+		document.getElementById("epostaUyari").innerHTML="Geçersiz E posta!";
+	}
+	if(document.getElementById("exampleInputnumara").value=="Telefon Numarası"|| document.getElementById("exampleInputAdSoyad").value=="" || document.getElementById("exampleInputAdSoyad").value=="Bu alan boş bırakılamaz")
+	{
+		document.getElementById("telefonUyari").innerHTML="Telefon Numaranızı Yazınız!";
+	}
+	if(document.getElementById("exampleInputbaslik").value=="Konu Başlığı"|| document.getElementById("exampleInputAdSoyad").value=="" || document.getElementById("exampleInputAdSoyad").value=="Bu alan boş bırakılamaz")
+	{
+		document.getElementById("baslikUyari").innerHTML="Konu Başlığı Yazınız!";
+	}
+	if(document.getElementById("exampleInputmesaj").value=="Mesajınızı Giriniz"|| document.getElementById("exampleInputAdSoyad").value=="" || document.getElementById("exampleInputAdSoyad").value=="Bu alan boş bırakılamaz")
+	{
+		document.getElementById("mesajUyari").innerHTML="Mesajınızı Yazınız!";
+	}
+}
+
+
+
+    </script>
+    	
+
+  </head>
+  <body>
+  <div class="container-fluid">
+     <header>
+        <div class= "container">
+        <div class="row">
+        <div class="col-lg-3">
+        <div class="logo"><img src= "images/logo.png" class="img-responsive" width="285" height="285"/></div>
+     </div>
+        <div class="col-lg-9">
+       <h1 style="color:black;">WEB SİTEME HOŞ GELDİNİZ</h1>
+       <h6 style="color: black;  ">Yaşayan Şehir,Yaşanacak Şehir...</h6>
+     </div>
+         </div>
+      <div class="row">
+      <div class="col-lg-12">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+     </button>
+          <section id="giris">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        <a class="nav-link" href="index.html">ANASAYFA <span class="sr-only">(current)</span></a>
+        </li>
+       <li class="nav-item">
+         <a class="nav-link" href="Hakkimda.html">ÖZGEÇMİŞİM</a>
+        </li>
+       <li class="nav-item">
+       <a class="nav-link İletişim" href="istanbulunTarihcesi.html">İSTANBUL</a>
+       </li>
+        <li class="nav-item">
+       <a class="nav-link" href="sehrimiTaniyorum.html">TARİHİ MİRASIMIZ</a>
+       </li>
+       <li class="nav-item">
+       <a class="nav-link Takımlar" href="istanbulTakimlari.html">TAKIMLAR</a>
+       </li>
+        <li class="active">
+        <a class="nav-link İletişim" href="iletisim.html">İLETİŞİM</a>
+        </li>
+        </ul>  
+              </div>
+      </section>
+           </nav>
+                  </div>
+                    </div>
+                  </div>
+                </header>
+            
+                <div class="content">
+                <div class="container">
+                <div class="row"></div>
+                <div class="row">
+                   
+               <div class ="row margintop25">
+              <div class="col-lg-8">
+              <div class="colon2">
+              <h2>İletişim Bilgileri</h2>
+
+            <table class="table table-bordered table-hover">
+            <tr>
+            <td>Adres</td>
+            <td>İSTANBUL</td>
+            </tr>
+            <tr>
+           <td>Telefon</td>
+           <td>0 (111) 111 11 11</td>
+            </tr>
+            <tr>
+            <td>Faks</td>
+            <td>0 (222) 222 22 22</td>
+             </tr>
+          <tr>
+           <td>E-Posta</td>
+          <td>nurdan.karahan@andasis.com</td>
+          </tr>
+          </table>
+              <h4>İletişim Formu</h4>
+              <form action="atama.php" method="POST">
+              <div class="form-group">
+              <label for="exampleInputAdSoyad">Ad Soyad</label>
+              <input type="adsoyad" name="name" class="form-control" id="exampleInputAdSoyad" aria-describedby="AdHelp" value="Ad Soyad" onfocus="odaklan(this.id)" onblur="cikis(this.id,this.value)">
+              <span id="adUyari"></span>
+                </div>
+              <div class="form-group">
+              <label for="exampleInputPassword1">E-posta</label>
+              <input type="eposta" name="email" class="form-control" id="exampleInputEposta" value="E-posta" onfocus="odaklan(this.id)" onblur="cikis(this.id,this.value)">
+              <span id="epostaUyari"></span>
+              </div>
+              <div class="form-group">
+             <label for="exampleInputtelefon">Telefon Numarası</label>
+            <input type="number" name="telefon" class="form-control" id="exampleInputnumara" aria-describedby="AdHelp" value="Telefon Numarası" onfocus="odaklan(this.id)" onblur="cikis(this.id,this.value)">
+            <span id="telefonUyari"></span>
+              <div class="form-group">
+            <label for="exampleInputmesaj">Mesaj</label>
+            <input type="text" class="form-control" id="exampleInputbaslik" aria-describedby="AdHelp" value="Konu Başlığı" onfocus="odaklan(this.id)" onblur="cikis(this.id,this.value)">
+             <span id="baslikUyari"></span>
+            <input type="text" name="mesaj" class="form-control" id="exampleInputmesaj" rows="4"  value="Mesajınızı Giriniz" onfocus="odaklan(this.id)" onblur="cikis(this.id,this.value)" >
+            <span id="mesajUyari"></span>
+              </div> 
+             <input type="submit" class="form-control submit" value="Gönder">
+            <button type="button" class="btn btn-danger" value="Temizle" onClick="javascript:ResetTheForm(this.form)">Temizle</button>
+            </form>
+             </div>
+            </div>
+            <div  class="col-lg-4">
+            <img src="images/iletişim.jpg"  width="500" height="350" class="img-responsive"/>
+
+        </div>
+      </div>
+   </div>
+                   
+  </div>
+       </div>
+   <footer>
+           <div class="container">
+                 <div class="row">
+                      <div class="col-lg-3 ">
+                        <ul>
+                        <span class="fBaslık">İLETİŞİM BİLGİLERİ</span>
+                         <li>Adres:İSTANBUL</li>
+                         <li>Telefon: 0 (111) 111 11 11</li>
+                        <li>Fax: 0 (222) 222 22 22</li>
+                         <li>Mail: <a href= "mailto:nurdan.karahan@andasis.com">nurdan.karahan@andasis.com</a></li>
+                         </ul>
+    </div>
+        </div>
+              </div>
+        </footer>    
+      </div>
+  </body>
+</html>
